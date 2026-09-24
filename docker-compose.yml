@@ -1,0 +1,127 @@
+# Topologia física do laboratório: 5 roteadores (A a E), 5 LANs de acesso e 4 redes
+# de trânsito. Diagrama e tabela de endereços no README.md.
+#
+#   LAN de cada roteador N: 10.0.N.0/24, roteador .1 e host .10 (ha ... he)
+#   sw0 10.0.10.0/24  segmento compartilhado A, B, C   (faz o papel de um switch)
+#   sw1 10.0.20.0/24  segmento compartilhado A, D, E
+#   be  10.0.25.0/24  enlace B-E
+#   cd  10.0.34.0/24  enlace C-D
+#
+# Nas redes de trânsito o roteador N usa o endereço .N (A=.1 ... E=.5).
+# De A até E existem três caminhos: direto por sw1, por B (sw0, be) e por C e D (sw0, cd, sw1).
+#
+# O Docker ocupa o gateway de cada rede e cria uma rota default por ele. O gateway fica
+# em .254 para liberar o .1, e os entrypoints removem essa rota default ao iniciar,
+# para que o único caminho entre as LANs seja o roteamento configurado aqui.
+# As redes não podem ser "internal": nesse modo o Docker descarta no bridge pacotes com
+# destino fora da sub-rede, o que bloqueia o multicast do OSPF/RIP e o tráfego roteado.
+
+name: roteamento-lab
+
+x-router: &router
+  build: { context: ., dockerfile: docker/router.Dockerfile }
+  image: roteamento-lab/router:latest
+  cap_add: [NET_ADMIN, NET_RAW, SYS_ADMIN]
+  # rp_filter desligado em cada interface: com caminhos alternativos a ida e a volta
+  # podem seguir rotas diferentes, e o modo estrito descartaria esses pacotes.
+  # Precisa ser por interface porque o valor efetivo é o maior entre "all" e a interface.
+  sysctls:
+    net.ipv4.ip_forward: 1
+    net.ipv4.conf.all.rp_filter: 0
+    net.ipv4.conf.default.rp_filter: 0
+    net.ipv4.conf.eth0.rp_filter: 0
+    net.ipv4.conf.eth1.rp_filter: 0
+    net.ipv4.conf.eth2.rp_filter: 0
+  volumes:
+    - ./configs:/config:ro
+    - ./algoritmo:/opt/algoritmo:ro
+    - ./resultados:/resultados
+
+x-host: &host
+  build: { context: ., dockerfile: docker/host.Dockerfile }
+  image: roteamento-lab/host:latest
+  cap_add: [NET_ADMIN, NET_RAW]
+  volumes:
+    - ./resultados:/resultados
+
+services:
+  a:
+    <<: *router
+    hostname: a
+    environment: { NODE: a, PROTO: "${PROTO:-ospf}" }
+    networks:
+      lan-a: { ipv4_address: 10.0.1.1 }
+      sw0:   { ipv4_address: 10.0.10.1 }
+      sw1:   { ipv4_address: 10.0.20.1 }
+  b:
+    <<: *router
+    hostname: b
+    environment: { NODE: b, PROTO: "${PROTO:-ospf}" }
+    networks:
+      lan-b: { ipv4_address: 10.0.2.1 }
+      sw0:   { ipv4_address: 10.0.10.2 }
+      be:    { ipv4_address: 10.0.25.2 }
+  c:
+    <<: *router
+    hostname: c
+    environment: { NODE: c, PROTO: "${PROTO:-ospf}" }
+    networks:
+      lan-c: { ipv4_address: 10.0.3.1 }
+      sw0:   { ipv4_address: 10.0.10.3 }
+      cd:    { ipv4_address: 10.0.34.3 }
+  d:
+    <<: *router
+    hostname: d
+    environment: { NODE: d, PROTO: "${PROTO:-ospf}" }
+    networks:
+      lan-d: { ipv4_address: 10.0.4.1 }
+      cd:    { ipv4_address: 10.0.34.4 }
+      sw1:   { ipv4_address: 10.0.20.4 }
+  e:
+    <<: *router
+    hostname: e
+    environment: { NODE: e, PROTO: "${PROTO:-ospf}" }
+    networks:
+      lan-e: { ipv4_address: 10.0.5.1 }
+      be:    { ipv4_address: 10.0.25.5 }
+      sw1:   { ipv4_address: 10.0.20.5 }
+
+  ha:
+    <<: *host
+    hostname: ha
+    environment: { GATEWAY: 10.0.1.1 }
+    networks: { lan-a: { ipv4_address: 10.0.1.10 } }
+  hb:
+    <<: *host
+    hostname: hb
+    environment: { GATEWAY: 10.0.2.1 }
+    networks: { lan-b: { ipv4_address: 10.0.2.10 } }
+  hc:
+    <<: *host
+    hostname: hc
+    environment: { GATEWAY: 10.0.3.1 }
+    networks: { lan-c: { ipv4_address: 10.0.3.10 } }
+  hd:
+    <<: *host
+    hostname: hd
+    environment: { GATEWAY: 10.0.4.1 }
+    networks: { lan-d: { ipv4_address: 10.0.4.10 } }
+  he:
+    <<: *host
+    hostname: he
+    environment: { GATEWAY: 10.0.5.1 }
+    networks: { lan-e: { ipv4_address: 10.0.5.10 } }
+
+x-net: &net
+  driver: bridge
+
+networks:
+  lan-a: { <<: *net, ipam: { config: [{ subnet: 10.0.1.0/24,  gateway: 10.0.1.254 }] } }
+  lan-b: { <<: *net, ipam: { config: [{ subnet: 10.0.2.0/24,  gateway: 10.0.2.254 }] } }
+  lan-c: { <<: *net, ipam: { config: [{ subnet: 10.0.3.0/24,  gateway: 10.0.3.254 }] } }
+  lan-d: { <<: *net, ipam: { config: [{ subnet: 10.0.4.0/24,  gateway: 10.0.4.254 }] } }
+  lan-e: { <<: *net, ipam: { config: [{ subnet: 10.0.5.0/24,  gateway: 10.0.5.254 }] } }
+  sw0:   { <<: *net, ipam: { config: [{ subnet: 10.0.10.0/24, gateway: 10.0.10.254 }] } }
+  sw1:   { <<: *net, ipam: { config: [{ subnet: 10.0.20.0/24, gateway: 10.0.20.254 }] } }
+  cd:    { <<: *net, ipam: { config: [{ subnet: 10.0.34.0/24, gateway: 10.0.34.254 }] } }
+  be:    { <<: *net, ipam: { config: [{ subnet: 10.0.25.0/24, gateway: 10.0.25.254 }] } }

@@ -1,0 +1,7 @@
+# Resultados são regenerados por make metricas / make graficos.
+# Remova a linha abaixo se quiser versionar os resultados usados na apresentação.
+resultados/*
+!resultados/.gitkeep
+.DS_Store
+__pycache__/
+*.pyc

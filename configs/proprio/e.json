@@ -1,0 +1,8 @@
+{
+  "no": "e",
+  "router_id": "5.5.5.5",
+  "intervalo_hello_s": 5,
+  "tempo_morto_s": 15,
+  "intervalo_anuncio_s": 10,
+  "parametros": {}
+}

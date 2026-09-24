@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="960" viewBox="0 0 1400 960">
+<rect width="1400" height="960" fill="#ffffff"/>
+<text x="40.0" y="48.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="start" fill="#1f2933" >Topologia do laboratório de roteamento</text>
+<text x="40.0" y="74.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="normal" text-anchor="start" fill="#5f6b76" >5 roteadores FRRouting, 5 hosts e 9 redes /24, um container Docker por nó. Área OSPF única (área 0) e mesma topologia para OSPF, RIP e o algoritmo próprio.</text>
+<line x1="90" y1="420" x2="330" y2="420" stroke="#8a96a3" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="1320" y1="180" x2="1150" y2="180" stroke="#8a96a3" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="1015" y1="320" x2="850" y2="320" stroke="#8a96a3" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="1015" y1="520" x2="850" y2="520" stroke="#8a96a3" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="1320" y1="660" x2="1150" y2="660" stroke="#8a96a3" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="590" y1="235" x2="330" y2="420" stroke="#3d4a57" stroke-width="3" stroke-linecap="round"/>
+<line x1="590" y1="235" x2="1150" y2="180" stroke="#3d4a57" stroke-width="3" stroke-linecap="round"/>
+<line x1="590" y1="235" x2="850" y2="320" stroke="#3d4a57" stroke-width="3" stroke-linecap="round"/>
+<line x1="590" y1="605" x2="330" y2="420" stroke="#d9480f" stroke-width="3" stroke-linecap="round"/>
+<line x1="590" y1="605" x2="850" y2="520" stroke="#3d4a57" stroke-width="3" stroke-linecap="round"/>
+<line x1="590" y1="605" x2="1150" y2="660" stroke="#3d4a57" stroke-width="3" stroke-linecap="round"/>
+<line x1="1150" y1="180" x2="1150" y2="660" stroke="#3d4a57" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="850" y1="320" x2="850" y2="520" stroke="#3d4a57" stroke-width="3.5" stroke-linecap="round"/>
+<rect x="175.2" y="410.2" width="85.6" height="19.5" rx="9.8" fill="#ffffff" stroke="#5f6b76" stroke-width="1.2"/>
+<text x="218.0" y="423.8" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" text-anchor="middle" fill="#5f6b76" >10.0.1.0/24</text>
+<rect x="1186.2" y="170.2" width="85.6" height="19.5" rx="9.8" fill="#ffffff" stroke="#5f6b76" stroke-width="1.2"/>
+<text x="1229.0" y="183.8" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" text-anchor="middle" fill="#5f6b76" >10.0.2.0/24</text>
+<rect x="883.7" y="310.2" width="85.6" height="19.5" rx="9.8" fill="#ffffff" stroke="#5f6b76" stroke-width="1.2"/>
+<text x="926.5" y="323.8" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" text-anchor="middle" fill="#5f6b76" >10.0.3.0/24</text>
+<rect x="883.7" y="510.2" width="85.6" height="19.5" rx="9.8" fill="#ffffff" stroke="#5f6b76" stroke-width="1.2"/>
+<text x="926.5" y="523.8" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" text-anchor="middle" fill="#5f6b76" >10.0.4.0/24</text>
+<rect x="1186.2" y="650.2" width="85.6" height="19.5" rx="9.8" fill="#ffffff" stroke="#5f6b76" stroke-width="1.2"/>
+<text x="1229.0" y="663.8" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="normal" text-anchor="middle" fill="#5f6b76" >10.0.5.0/24</text>
+<rect x="1086.0" y="409.8" width="128.1" height="20.5" rx="10.2" fill="#ffffff" stroke="#3d4a57" stroke-width="1.2"/>
+<text x="1150.0" y="424.1" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#3d4a57" >be  10.0.25.0/24</text>
+<rect x="786.0" y="409.8" width="128.1" height="20.5" rx="10.2" fill="#ffffff" stroke="#3d4a57" stroke-width="1.2"/>
+<text x="850.0" y="424.1" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="bold" text-anchor="middle" fill="#3d4a57" >cd  10.0.34.0/24</text>
+<g transform="translate(460.0,512.5)">
+<circle r="15" fill="#fff" stroke="#d9480f" stroke-width="2"/>
+<polygon points="3,-11 -7,2 -1,2 -4,11 7,-3 1,-3" fill="#d9480f"/>
+</g>
+<text x="438.0" y="548.5" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="end" fill="#d9480f" >enlace derrubado no teste de falha</text>
+<text x="438.0" y="564.5" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="normal" text-anchor="end" fill="#d9480f" >make falha NO=a REDE=10.0.20.</text>
+<text x="378.3" y="405.6" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f6fb2" >.1</text>
+<text x="363.2" y="463.6" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f6fb2" >.1</text>
+<text x="1099.0" y="175.9" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f6fb2" >.2</text>
+<text x="1163.0" y="234.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f6fb2" >.2</text>
+<text x="806.5" y="296.1" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f6fb2" >.3</text>
+<text x="837.0" y="374.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f6fb2" >.3</text>
+<text x="806.5" y="551.9" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f6fb2" >.4</text>
+<text x="837.0" y="474.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f6fb2" >.4</text>
+<text x="1099.0" y="672.1" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f6fb2" >.5</text>
+<text x="1163.0" y="614.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#1f6fb2" >.5</text>
+<g transform="translate(590,235)">
+<rect x="-48.0" y="-20.0" width="96" height="40" rx="6" fill="#1c8a7e" stroke="#12594f" stroke-width="2"/>
+<line x1="-30" y1="-8" x2="30" y2="-8" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+<polygon points="33,-8 24,-13 24,-3" fill="#fff"/>
+<line x1="30" y1="8" x2="-30" y2="8" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+<polygon points="-33,8 -24,3 -24,13" fill="#fff"/>
+</g>
+<text x="590.0" y="169.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c8a7e" >sw0</text>
+<text x="590.0" y="187.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1f2933" >10.0.10.0/24</text>
+<text x="590.0" y="203.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" text-anchor="middle" fill="#5f6b76" >segmento compartilhado: A, B, C</text>
+<g transform="translate(590,605)">
+<rect x="-48.0" y="-20.0" width="96" height="40" rx="6" fill="#1c8a7e" stroke="#12594f" stroke-width="2"/>
+<line x1="-30" y1="-8" x2="30" y2="-8" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+<polygon points="33,-8 24,-13 24,-3" fill="#fff"/>
+<line x1="30" y1="8" x2="-30" y2="8" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+<polygon points="-33,8 -24,3 -24,13" fill="#fff"/>
+</g>
+<text x="590.0" y="649.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c8a7e" >sw1</text>
+<text x="590.0" y="667.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1f2933" >10.0.20.0/24</text>
+<text x="590.0" y="683.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" text-anchor="middle" fill="#5f6b76" >segmento compartilhado: A, D, E</text>
+<g transform="translate(330,420)">
+<circle r="30" fill="#1f6fb2" stroke="#134a7a" stroke-width="2"/>
+<line x1="15.3" y1="15.3" x2="3.5" y2="3.5" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="2.1,2.1 12.0,4.9 4.9,12.0" fill="#fff"/>
+<line x1="-15.3" y1="-15.3" x2="-3.5" y2="-3.5" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="-2.1,-2.1 -12.0,-4.9 -4.9,-12.0" fill="#fff"/>
+<line x1="-3.5" y1="3.5" x2="-15.3" y2="15.3" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="-16.7,16.7 -13.9,6.8 -6.8,13.9" fill="#fff"/>
+<line x1="3.5" y1="-3.5" x2="15.3" y2="-15.3" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="16.7,-16.7 13.9,-6.8 6.8,-13.9" fill="#fff"/>
+</g>
+<text x="330.0" y="364.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#1f2933" >Roteador A</text>
+<text x="330.0" y="380.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="normal" text-anchor="middle" fill="#5f6b76" >RID 1.1.1.1</text>
+<g transform="translate(1150,180)">
+<circle r="30" fill="#1f6fb2" stroke="#134a7a" stroke-width="2"/>
+<line x1="15.3" y1="15.3" x2="3.5" y2="3.5" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="2.1,2.1 12.0,4.9 4.9,12.0" fill="#fff"/>
+<line x1="-15.3" y1="-15.3" x2="-3.5" y2="-3.5" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="-2.1,-2.1 -12.0,-4.9 -4.9,-12.0" fill="#fff"/>
+<line x1="-3.5" y1="3.5" x2="-15.3" y2="15.3" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="-16.7,16.7 -13.9,6.8 -6.8,13.9" fill="#fff"/>
+<line x1="3.5" y1="-3.5" x2="15.3" y2="-15.3" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="16.7,-16.7 13.9,-6.8 6.8,-13.9" fill="#fff"/>
+</g>
+<text x="1150.0" y="124.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#1f2933" >Roteador B</text>
+<text x="1150.0" y="140.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="normal" text-anchor="middle" fill="#5f6b76" >RID 2.2.2.2</text>
+<g transform="translate(850,320)">
+<circle r="30" fill="#1f6fb2" stroke="#134a7a" stroke-width="2"/>
+<line x1="15.3" y1="15.3" x2="3.5" y2="3.5" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="2.1,2.1 12.0,4.9 4.9,12.0" fill="#fff"/>
+<line x1="-15.3" y1="-15.3" x2="-3.5" y2="-3.5" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="-2.1,-2.1 -12.0,-4.9 -4.9,-12.0" fill="#fff"/>
+<line x1="-3.5" y1="3.5" x2="-15.3" y2="15.3" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="-16.7,16.7 -13.9,6.8 -6.8,13.9" fill="#fff"/>
+<line x1="3.5" y1="-3.5" x2="15.3" y2="-15.3" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="16.7,-16.7 13.9,-6.8 6.8,-13.9" fill="#fff"/>
+</g>
+<text x="816.0" y="354.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="end" fill="#1f2933" >Roteador C</text>
+<text x="816.0" y="370.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="normal" text-anchor="end" fill="#5f6b76" >RID 3.3.3.3</text>
+<g transform="translate(850,520)">
+<circle r="30" fill="#1f6fb2" stroke="#134a7a" stroke-width="2"/>
+<line x1="15.3" y1="15.3" x2="3.5" y2="3.5" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="2.1,2.1 12.0,4.9 4.9,12.0" fill="#fff"/>
+<line x1="-15.3" y1="-15.3" x2="-3.5" y2="-3.5" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="-2.1,-2.1 -12.0,-4.9 -4.9,-12.0" fill="#fff"/>
+<line x1="-3.5" y1="3.5" x2="-15.3" y2="15.3" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="-16.7,16.7 -13.9,6.8 -6.8,13.9" fill="#fff"/>
+<line x1="3.5" y1="-3.5" x2="15.3" y2="-15.3" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="16.7,-16.7 13.9,-6.8 6.8,-13.9" fill="#fff"/>
+</g>
+<text x="816.0" y="494.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="end" fill="#1f2933" >Roteador D</text>
+<text x="816.0" y="510.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="normal" text-anchor="end" fill="#5f6b76" >RID 4.4.4.4</text>
+<g transform="translate(1150,660)">
+<circle r="30" fill="#1f6fb2" stroke="#134a7a" stroke-width="2"/>
+<line x1="15.3" y1="15.3" x2="3.5" y2="3.5" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="2.1,2.1 12.0,4.9 4.9,12.0" fill="#fff"/>
+<line x1="-15.3" y1="-15.3" x2="-3.5" y2="-3.5" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="-2.1,-2.1 -12.0,-4.9 -4.9,-12.0" fill="#fff"/>
+<line x1="-3.5" y1="3.5" x2="-15.3" y2="15.3" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="-16.7,16.7 -13.9,6.8 -6.8,13.9" fill="#fff"/>
+<line x1="3.5" y1="-3.5" x2="15.3" y2="-15.3" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="16.7,-16.7 13.9,-6.8 6.8,-13.9" fill="#fff"/>
+</g>
+<text x="1150.0" y="712.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#1f2933" >Roteador E</text>
+<text x="1150.0" y="728.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="normal" text-anchor="middle" fill="#5f6b76" >RID 5.5.5.5</text>
+<g transform="translate(90,420)">
+<rect x="-24" y="-22" width="48" height="33" rx="4" fill="#56636e" stroke="#39434b" stroke-width="1.5"/>
+<rect x="-19" y="-17" width="38" height="23" rx="2" fill="#dbe7f3"/>
+<path d="M-13 1 L-5 -7 L1 -2 L9 -11 L15 -5" fill="none" stroke="#1f6fb2" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="-5" y="11" width="10" height="7" fill="#56636e"/>
+<rect x="-15" y="17" width="30" height="5" rx="2" fill="#56636e"/>
+</g>
+<text x="90.0" y="462.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1f2933" >ha</text>
+<text x="90.0" y="478.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="normal" text-anchor="middle" fill="#1f2933" >10.0.1.10</text>
+<text x="90.0" y="493.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="normal" text-anchor="middle" fill="#5f6b76" >gw 10.0.1.1</text>
+<g transform="translate(1320,180)">
+<rect x="-24" y="-22" width="48" height="33" rx="4" fill="#56636e" stroke="#39434b" stroke-width="1.5"/>
+<rect x="-19" y="-17" width="38" height="23" rx="2" fill="#dbe7f3"/>
+<path d="M-13 1 L-5 -7 L1 -2 L9 -11 L15 -5" fill="none" stroke="#1f6fb2" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="-5" y="11" width="10" height="7" fill="#56636e"/>
+<rect x="-15" y="17" width="30" height="5" rx="2" fill="#56636e"/>
+</g>
+<text x="1320.0" y="222.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1f2933" >hb</text>
+<text x="1320.0" y="238.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="normal" text-anchor="middle" fill="#1f2933" >10.0.2.10</text>
+<text x="1320.0" y="253.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="normal" text-anchor="middle" fill="#5f6b76" >gw 10.0.2.1</text>
+<g transform="translate(1015,320)">
+<rect x="-24" y="-22" width="48" height="33" rx="4" fill="#56636e" stroke="#39434b" stroke-width="1.5"/>
+<rect x="-19" y="-17" width="38" height="23" rx="2" fill="#dbe7f3"/>
+<path d="M-13 1 L-5 -7 L1 -2 L9 -11 L15 -5" fill="none" stroke="#1f6fb2" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="-5" y="11" width="10" height="7" fill="#56636e"/>
+<rect x="-15" y="17" width="30" height="5" rx="2" fill="#56636e"/>
+</g>
+<text x="1015.0" y="362.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1f2933" >hc</text>
+<text x="1015.0" y="378.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="normal" text-anchor="middle" fill="#1f2933" >10.0.3.10</text>
+<text x="1015.0" y="393.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="normal" text-anchor="middle" fill="#5f6b76" >gw 10.0.3.1</text>
+<g transform="translate(1015,520)">
+<rect x="-24" y="-22" width="48" height="33" rx="4" fill="#56636e" stroke="#39434b" stroke-width="1.5"/>
+<rect x="-19" y="-17" width="38" height="23" rx="2" fill="#dbe7f3"/>
+<path d="M-13 1 L-5 -7 L1 -2 L9 -11 L15 -5" fill="none" stroke="#1f6fb2" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="-5" y="11" width="10" height="7" fill="#56636e"/>
+<rect x="-15" y="17" width="30" height="5" rx="2" fill="#56636e"/>
+</g>
+<text x="1015.0" y="562.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1f2933" >hd</text>
+<text x="1015.0" y="578.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="normal" text-anchor="middle" fill="#1f2933" >10.0.4.10</text>
+<text x="1015.0" y="593.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="normal" text-anchor="middle" fill="#5f6b76" >gw 10.0.4.1</text>
+<g transform="translate(1320,660)">
+<rect x="-24" y="-22" width="48" height="33" rx="4" fill="#56636e" stroke="#39434b" stroke-width="1.5"/>
+<rect x="-19" y="-17" width="38" height="23" rx="2" fill="#dbe7f3"/>
+<path d="M-13 1 L-5 -7 L1 -2 L9 -11 L15 -5" fill="none" stroke="#1f6fb2" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="-5" y="11" width="10" height="7" fill="#56636e"/>
+<rect x="-15" y="17" width="30" height="5" rx="2" fill="#56636e"/>
+</g>
+<text x="1320.0" y="702.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1f2933" >he</text>
+<text x="1320.0" y="718.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="normal" text-anchor="middle" fill="#1f2933" >10.0.5.10</text>
+<text x="1320.0" y="733.0" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="normal" text-anchor="middle" fill="#5f6b76" >gw 10.0.5.1</text>
+<line x1="40" y1="748" x2="1360" y2="748" stroke="#d5dbe1" stroke-width="1"/>
+<text x="40.0" y="770.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="bold" text-anchor="start" fill="#1f2933" >Símbolos</text>
+<g transform="translate(54,798) scale(0.5)">
+<g transform="translate(0,0)">
+<circle r="30" fill="#1f6fb2" stroke="#134a7a" stroke-width="2"/>
+<line x1="15.3" y1="15.3" x2="3.5" y2="3.5" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="2.1,2.1 12.0,4.9 4.9,12.0" fill="#fff"/>
+<line x1="-15.3" y1="-15.3" x2="-3.5" y2="-3.5" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="-2.1,-2.1 -12.0,-4.9 -4.9,-12.0" fill="#fff"/>
+<line x1="-3.5" y1="3.5" x2="-15.3" y2="15.3" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="-16.7,16.7 -13.9,6.8 -6.8,13.9" fill="#fff"/>
+<line x1="3.5" y1="-3.5" x2="15.3" y2="-15.3" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<polygon points="16.7,-16.7 13.9,-6.8 6.8,-13.9" fill="#fff"/>
+</g>
+</g>
+<text x="76.0" y="802.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >roteador FRR 10.2.1</text>
+<g transform="translate(54,832) scale(0.5)">
+<g transform="translate(0,0)">
+<rect x="-24" y="-22" width="48" height="33" rx="4" fill="#56636e" stroke="#39434b" stroke-width="1.5"/>
+<rect x="-19" y="-17" width="38" height="23" rx="2" fill="#dbe7f3"/>
+<path d="M-13 1 L-5 -7 L1 -2 L9 -11 L15 -5" fill="none" stroke="#1f6fb2" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="-5" y="11" width="10" height="7" fill="#56636e"/>
+<rect x="-15" y="17" width="30" height="5" rx="2" fill="#56636e"/>
+</g>
+</g>
+<text x="76.0" y="836.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >host Alpine 3.20</text>
+<g transform="translate(54,864) scale(0.3)">
+<g transform="translate(0,0)">
+<rect x="-48.0" y="-20.0" width="96" height="40" rx="6" fill="#1c8a7e" stroke="#12594f" stroke-width="2"/>
+<line x1="-30" y1="-8" x2="30" y2="-8" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+<polygon points="33,-8 24,-13 24,-3" fill="#fff"/>
+<line x1="30" y1="8" x2="-30" y2="8" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+<polygon points="-33,8 -24,3 -24,13" fill="#fff"/>
+</g>
+</g>
+<text x="76.0" y="868.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >bridge Docker (switch)</text>
+<line x1="40" y1="894" x2="68" y2="894" stroke="#3d4a57" stroke-width="3" stroke-linecap="round"/>
+<text x="76.0" y="898.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >enlace de trânsito</text>
+<line x1="40" y1="918" x2="68" y2="918" stroke="#8a96a3" stroke-width="2.5" stroke-linecap="round"/>
+<text x="76.0" y="922.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >LAN de acesso</text>
+<line x1="40" y1="942" x2="68" y2="942" stroke="#d9480f" stroke-width="3" stroke-linecap="round"/>
+<text x="76.0" y="946.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >enlace do teste de falha</text>
+<text x="250.0" y="770.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="bold" text-anchor="start" fill="#1f2933" >Endereçamento</text>
+<text x="250.0" y="794.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >LAN N: 10.0.N.0/24, roteador .1, host .10</text>
+<text x="250.0" y="813.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >Trânsito: o roteador N usa sempre .N</text>
+<text x="262.0" y="832.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >(A = .1, B = .2, C = .3, D = .4, E = .5)</text>
+<text x="250.0" y="851.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >Router ID: N.N.N.N (1.1.1.1 até 5.5.5.5)</text>
+<text x="250.0" y="870.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >Hosts: rota default pelo roteador da LAN</text>
+<text x="250.0" y="889.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#5f6b76" >.254 em cada rede: gateway do Docker,</text>
+<text x="250.0" y="908.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#5f6b76" >rota default removida nos roteadores</text>
+<text x="590.0" y="770.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="bold" text-anchor="start" fill="#1f2933" >Planos de controle (um por vez)</text>
+<text x="590.0" y="794.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >OSPFv2: área 0, custo 1 em todo enlace</text>
+<text x="602.0" y="813.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >(veth de 10 Gbit/s, ref. 100 Mbit/s)</text>
+<text x="602.0" y="832.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >toda rede é broadcast, com DR/BDR</text>
+<text x="590.0" y="851.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >RIPv2: timers 30 / 180 / 120 s</text>
+<text x="590.0" y="870.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >Próprio: UDP 5555, rotas proto 99</text>
+<text x="602.0" y="889.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >hello 5 s, morto 15 s, anúncio 10 s</text>
+<text x="590.0" y="908.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#5f6b76" >rp_filter desligado, ip_forward ligado</text>
+<text x="935.0" y="770.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="bold" text-anchor="start" fill="#1f2933" >Caminhos de ha até he</text>
+<text x="935.0" y="794.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >1. A → sw1 → E   (3 saltos no traceroute)</text>
+<text x="935.0" y="813.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >2. A → sw0 → B → be → E</text>
+<text x="935.0" y="832.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" >3. A → sw0 → C → cd → D → sw1 → E</text>
+<text x="935.0" y="851.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#1f2933" ></text>
+<text x="935.0" y="870.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#d9480f" >Sem o enlace de A em sw1, OSPF e RIP</text>
+<text x="935.0" y="889.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#d9480f" >convergem para o caminho 2 (menor custo</text>
+<text x="935.0" y="908.0" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" text-anchor="start" fill="#d9480f" >e menos saltos que o caminho 3).</text>
+</svg>
