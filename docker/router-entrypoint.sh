@@ -5,6 +5,10 @@
 set -eu
 : "${PROTO:?defina PROTO}" "${NODE:?defina NODE}"
 
+for IFACE in /proc/sys/net/ipv4/conf/*/rp_filter; do
+    echo 0 > "$IFACE" 2>/dev/null || true
+done
+
 # Remove a rota default criada pelo Docker: o roteador só deve conhecer
 # as redes conectadas e o que o protocolo de roteamento aprender.
 ip route del default 2>/dev/null || true

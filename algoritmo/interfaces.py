@@ -23,7 +23,6 @@ from ipaddress import IPv4Address
 from .config import Config
 from .tipos import Interface, Mensagem, Rota, Vizinho
 
-
 class Codec(ABC):
     """Converte Mensagem para bytes e de volta. O formato de fio é decisão da dupla."""
 
@@ -167,9 +166,32 @@ class Agente(ABC):
 
 def descobrir_interfaces() -> list[Interface]:
     """Interfaces IPv4 do roteador, exceto loopback. Deve ler do kernel (ex.: ip -j addr)."""
-    raise NotImplementedError
+    import subprocess
+    import json
+    from ipaddress import IPv4Interface
+
+    res = subprocess.run("ip -j addr", shell=True, capture_output=True, text=True)
+    interfaces = []
+
+    if res.returncode == 0:
+        dados = json.loads(res.stdout)
+        for iface in dados:
+            if iface.get("ifname") == "lo":
+                continue
+            for addr in iface.get("addr_info", []):
+                if addr.get("family") == "inet":
+                    cidr = f"{addr['local']}/{addr['prefixlen']}"
+                    interfaces.append(
+                        Interface(
+                            nome=iface["ifname"],
+                            endereco=IPv4Interface(cidr)
+                        )
+                    )
+    return interfaces
 
 
 def criar_agente(config: Config) -> Agente:
     """Monta o Agente com as implementações concretas escolhidas pela dupla."""
-    raise NotImplementedError("algoritmo próprio ainda não implementado: veja algoritmo/CONTRATO.md")
+    from .implementacao import GravidadeAgente
+    interfaces = descobrir_interfaces()
+    return GravidadeAgente(config, interfaces)
