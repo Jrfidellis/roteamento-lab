@@ -2,6 +2,7 @@
 
 Uso (sem depender do Python da máquina): make graficos
 Saída: resultados/graficos/*.png e resultados/graficos/resumo.md (tabela com todos os valores).
+Com ATRASO=1 lê e grava em resultados/atraso/ (cenário com atraso nas redes de trânsito).
 
 Cada protocolo tem uma cor fixa em todos os gráficos, e todo valor aparece escrito
 na barra, para que a leitura não dependa só da cor.
@@ -10,6 +11,7 @@ na barra, para que a leitura não dependa só da cor.
 from __future__ import annotations
 
 import csv
+import os
 from collections import defaultdict
 from pathlib import Path
 
@@ -18,7 +20,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 
-RESULTADOS = Path("resultados")
+RESULTADOS = Path("resultados/atraso") if os.environ.get("ATRASO") == "1" else Path("resultados")
 SAIDA = RESULTADOS / "graficos"
 ORDEM = ["ospf", "rip", "proprio"]
 NOMES = {"ospf": "OSPF", "rip": "RIP", "proprio": "Algoritmo próprio"}

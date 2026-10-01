@@ -13,6 +13,18 @@ done
 # as redes conectadas e o que o protocolo de roteamento aprender.
 ip route del default 2>/dev/null || true
 
+# Cenário com atraso: aplica o atraso de cada rede de trânsito antes de o protocolo subir,
+# para que a convergência e todas as medições já aconteçam com ele.
+if [ "${ATRASO:-0}" = 1 ]; then
+  grep -v '^#' /config/atrasos.conf | while read -r prefixo ms; do
+    [ -n "$prefixo" ] || continue
+    ip -o -4 addr show | awk -v p="$prefixo" 'index($4, p) == 1 {print $2}' | while read -r iface; do
+      tc qdisc replace dev "$iface" root netem delay "${ms}ms"
+      echo "[$NODE] atraso de ${ms} ms em $iface ($prefixo*)"
+    done
+  done
+fi
+
 case "$PROTO" in
   ospf|rip)
     cp "/config/$PROTO/daemons"      /etc/frr/daemons

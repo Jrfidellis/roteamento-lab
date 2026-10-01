@@ -66,6 +66,7 @@ ALFA_RTT = 0.3             # peso da amostra nova na média móvel do RTT
 ALFA_PERDA = 0.2           # idem para a perda de hellos
 MASSA_MIN = 0.1            # massa nunca cai abaixo disso (evita custo infinito por perda alta)
 HISTERESE = 0.25           # custo do enlace só muda se variar mais que 25 % (evita flapping)
+HISTERESE_ROTA = 0.30      # só troca o próximo salto se o caminho novo custar 30 % menos que o atual
 INTERVALO_MIN_DISPARO_S = 0.5   # espaço mínimo entre anúncios disparados por mudança
 RESYNC_KERNEL_S = 5.0      # reconcilia o kernel com a tabela desejada mesmo sem mudança
 TIMEOUT_RECEBER_S = 0.1
@@ -327,6 +328,7 @@ class GravidadeCalculoRotas(CalculoRotas):
 
         melhores: dict[IPv4Network, _Melhor] = {}
         chaves: dict[IPv4Network, tuple[float, int, int]] = {}
+        atuais: dict[IPv4Network, _Melhor] = {}   # caminho de hoje, recalculado com os custos novos
         diretas: set[IPv4Network] = set()
         for iface in conectadas:
             diretas.add(iface.rede)
@@ -337,13 +339,23 @@ class GravidadeCalculoRotas(CalculoRotas):
                 if rede in diretas:
                     continue
                 total = v.custo + custo
+                candidato = _Melhor(rede, total, (self.router_id,) + caminho, v.endereco, v.interface)
+                anterior = self._melhores.get(rede)
+                if anterior is not None and anterior.proximo_salto == v.endereco:
+                    atuais[rede] = candidato
                 # menor custo; empate -> menos saltos; empate -> menor IP (determinístico)
                 chave = (round(total, 6), len(caminho), int(v.endereco))
                 if rede not in melhores or chave < chaves[rede]:
                     chaves[rede] = chave
-                    melhores[rede] = _Melhor(
-                        rede, total, (self.router_id,) + caminho, v.endereco, v.interface
-                    )
+                    melhores[rede] = candidato
+
+        # Histerese de rota: diferença pequena no custo é ruído de medição, não motivo para
+        # trocar de caminho. Cada troca deixa os roteadores um instante com visões diferentes
+        # da rede, e é aí que pacotes se perdem ou entram em loop.
+        for rede, atual in atuais.items():
+            if melhores[rede].proximo_salto != atual.proximo_salto and \
+                    melhores[rede].custo >= atual.custo * (1 - HISTERESE_ROTA):
+                melhores[rede] = atual
 
         self._melhores = melhores
         return [

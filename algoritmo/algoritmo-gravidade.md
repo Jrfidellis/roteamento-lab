@@ -60,13 +60,20 @@ Como o vizinho é declarado morto entre 10 s e 15 s depois do último hello rece
 | `PISO_RTT_MS` | 1,0 | RTT abaixo disso é ruído de agendamento |
 | `ALFA_RTT` / `ALFA_PERDA` | 0,3 / 0,2 | suaviza sem atrasar demais a reação |
 | `HISTERESE` | 25 % | o custo publicado só muda se variar mais que isso; evita flapping |
+| `HISTERESE_ROTA` | 30 % | só troca o próximo salto se o caminho novo custar pelo menos 30 % menos que o atual (veja abaixo) |
 | `MASSA_MIN` | 0,1 | custo nunca explode por perda alta |
 | `INTERVALO_MIN_DISPARO_S` | 0,5 | limita o tráfego de controle em cascatas de mudança |
 | `RESYNC_KERNEL_S` | 5 | corrige o kernel se alguém mexer nele por fora |
 
+## Histerese de rota
+
+A histerese do enlace não basta. O RTT medido inclui o tempo que o laço do vizinho leva para responder ao hello, e esse laço fica parado enquanto executa `ip route`. Na primeira coleta de métricas, picos de até 20 ms num enlace de 0,05 ms, elevados ao quadrado, faziam o custo do mesmo caminho variar de 3 a 1.752. O roteador A trocou o próximo salto para a LAN de E 29 vezes em 9 minutos, e os pings de `ha` para `he` falhavam durante as trocas.
+
+Por isso, em `CalculoRotas.calcular`, o caminho atual é recalculado com os custos novos e só é substituído se o melhor candidato custar menos que `(1 − HISTERESE_ROTA) ×` o custo atual. A rota troca na hora quando o vizinho cai ou deixa de anunciar a rede: a histerese só segura trocas entre caminhos que continuam válidos.
+
 ## Limitação observada no ambiente de testes
 
-Nos containers, todos os enlaces têm praticamente o mesmo RTT. No roteador A, as rotas aprendidas ficaram com métrica entre 12 e 18 (12 a 13 na primeira, 16 a 18 nas seguintes), ou seja, cada enlace custa cerca de 13,5 (RTT em torno de 3,5 a 4,3 ms, que é ruído do Docker). Como os custos são quase iguais, o algoritmo escolhe caminhos parecidos com os de uma contagem de saltos. A vantagem da métrica só aparece quando os enlaces têm atrasos diferentes. Para demonstrá-la seria preciso configurar atraso nos enlaces (por exemplo com `tc netem`).
+Nos containers, todos os enlaces têm praticamente o mesmo RTT. No roteador A, as rotas aprendidas ficaram com métrica entre 12 e 18 (12 a 13 na primeira, 16 a 18 nas seguintes), ou seja, cada enlace custa cerca de 13,5 (RTT em torno de 3,5 a 4,3 ms, que é ruído do Docker). Como os custos são quase iguais, o algoritmo escolhe caminhos parecidos com os de uma contagem de saltos. A vantagem da métrica só aparece quando os enlaces têm atrasos diferentes. Para isso existe o cenário `ATRASO=1` (veja o README), que aplica com `tc netem` os atrasos de `configs/atrasos.conf`: nele, o caminho direto de A até E por `sw1` tem 30 ms de RTT, e o Gravidade passa por B, com 2 saltos e cerca de 10 ms.
 
 ## Como usar
 

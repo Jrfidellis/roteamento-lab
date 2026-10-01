@@ -1,6 +1,7 @@
 #!/bin/sh
 # Coleta as métricas de um plano de controle, sempre no mesmo cenário, para comparar
-# OSPF, RIP e o algoritmo próprio de forma justa. Grava resultados/<proto>/metricas.csv.
+# OSPF, RIP e o algoritmo próprio de forma justa. Grava resultados/<proto>/metricas.csv
+# (com ATRASO=1, resultados/atraso/<proto>/metricas.csv).
 #
 # Uso: scripts/metricas.sh <ospf|rip|proprio>
 # Variáveis (padrão entre parênteses):
@@ -8,6 +9,7 @@
 #   JANELA      (120) duração da captura do tráfego de controle em regime, em s
 #   FALHA_TOTAL (240) duração do ping contínuo no cenário de falha, em s
 #   FALHA_APOS  (10)  segundos de ping antes de derrubar o enlace
+#   ATRASO      (0)   1 = redes de trânsito com o atraso de configs/atrasos.conf
 #
 # Cenário:
 #   1. sobe o laboratório do zero e mede o tempo até todos os roteadores conhecerem
@@ -24,7 +26,9 @@ PROTO="${1:?uso: metricas.sh <ospf|rip|proprio>}"; validar_proto "$PROTO"
 CONV_MAX="${CONV_MAX:-180}"; JANELA="${JANELA:-120}"
 FALHA_TOTAL="${FALHA_TOTAL:-240}"; FALHA_APOS="${FALHA_APOS:-10}"
 FILTRO=$(filtro_controle "$PROTO"); KP=$(proto_kernel "$PROTO")
-OUT="resultados/$PROTO"; CSV="$OUT/metricas.csv"
+ATRASO="${ATRASO:-0}"; export ATRASO
+DIR="$PROTO"; [ "$ATRASO" = 1 ] && DIR="atraso/$PROTO"
+OUT="resultados/$DIR"; CSV="$OUT/metricas.csv"
 rm -rf "$OUT"; mkdir -p "$OUT"
 echo "protocolo,metrica,no,valor,unidade" > "$CSV"
 registrar() { echo "$PROTO,$1,$2,$3,$4" >> "$CSV"; }
@@ -37,9 +41,9 @@ bytes_pcap() {  # soma do tamanho dos quadros de um pcap dentro do container
 pacotes_pcap() { ex "$1" tcpdump -r "$2" -nn 2>/dev/null | wc -l | tr -d ' '; }
 
 # 1. Convergência inicial
-log "subindo o laboratório com $PROTO"
+log "subindo o laboratório com $PROTO$([ "$ATRASO" = 1 ] && echo ' (cenário com atraso)')"
 docker compose down >/dev/null 2>&1
-PROTO="$PROTO" docker compose up -d >/dev/null 2>&1 || { log "falha ao subir"; exit 1; }
+PROTO="$PROTO" docker compose up -d --build >/dev/null 2>&1 || { log "falha ao subir"; exit 1; }
 inicio=$(date +%s); convergiu=0
 while [ $(( $(date +%s) - inicio )) -lt "$CONV_MAX" ]; do
   completo=1
@@ -77,7 +81,7 @@ for r in $ROTEADORES; do
   registrar controle_pacotes "$r" "$p" pacotes
   registrar controle_bytes "$r" "$b" bytes
   tp=$((tp + p)); tb=$((tb + b))
-  ex "$r" cp /tmp/regime.pcap "/resultados/$PROTO/regime-$r.pcap"
+  ex "$r" cp /tmp/regime.pcap "/resultados/$DIR/regime-$r.pcap"
 done
 registrar controle_pacotes total "$tp" pacotes
 registrar controle_bytes total "$tb" bytes
@@ -91,15 +95,16 @@ rtt=$(grep rtt "$OUT/ping.txt" | awk -F'= ' '{print $2}' | awk -F/ '{print $1, $
 set -- $rtt
 registrar rtt_min ha-he "${1:-NA}" ms; registrar rtt_medio ha-he "${2:-NA}" ms; registrar rtt_max ha-he "${3:-NA}" ms
 ex ha traceroute -n -w 1 -q 1 10.0.5.10 > "$OUT/caminho.txt" 2>&1
-registrar saltos ha-he "$(tail -n +2 "$OUT/caminho.txt" | grep -c .)" saltos
+# Saltos só contam se o traceroute chegou a he; senão o número de linhas é só o limite (30).
+registrar saltos ha-he "$(awk '$2 == "10.0.5.10" { n = $1 } END { print n ? n : "NA" }' "$OUT/caminho.txt")" saltos
 
 # 5. Falha do enlace A-sw1
 log "cenário de falha: ping contínuo por ${FALHA_TOTAL}s, enlace cai após ${FALHA_APOS}s"
 # O ping do iputils encerra ao receber um ICMP de erro (ex.: Destination Net Unreachable),
 # então ele é reiniciado até completar FALHA_TOTAL segundos.
-docker compose exec -d ha sh -c "fim=\$((\$(date +%s) + $FALHA_TOTAL)); : > /resultados/$PROTO/falha-ping.txt;
+docker compose exec -d ha sh -c "fim=\$((\$(date +%s) + $FALHA_TOTAL)); : > /resultados/$DIR/falha-ping.txt;
   while [ \$(date +%s) -lt \$fim ]; do
-    ping -D -i 0.2 -W 1 -w \$((fim - \$(date +%s))) 10.0.5.10 >> /resultados/$PROTO/falha-ping.txt 2>&1
+    ping -D -i 0.2 -W 1 -w \$((fim - \$(date +%s))) 10.0.5.10 >> /resultados/$DIR/falha-ping.txt 2>&1
   done"
 for r in $ROTEADORES; do
   docker compose exec -d "$r" sh -c "timeout $FALHA_TOTAL tcpdump -i any -Q out -nn -w /tmp/falha.pcap '$FILTRO' 2>/dev/null"

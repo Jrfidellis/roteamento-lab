@@ -1,6 +1,8 @@
 # Laboratório de roteamento: OSPF, RIP e algoritmo próprio sobre a mesma topologia.
 # Uso rápido: make up PROTO=ospf ; make verificar PROTO=ospf ; make metricas PROTO=ospf
+# ATRASO=1 em up, metricas e graficos usa o cenário com atraso de configs/atrasos.conf.
 PROTO ?= ospf
+ATRASO ?= 0
 NO    ?= a
 DE    ?= ha
 PARA  ?= 10.0.5.10
@@ -19,8 +21,8 @@ build:  ## constrói as imagens
 up:  ## sobe do zero com PROTO=ospf|rip|proprio (derruba o que estiver rodando)
 	@case "$(PROTO)" in ospf|rip|proprio) ;; *) echo "PROTO deve ser ospf, rip ou proprio"; exit 1;; esac
 	$(COMPOSE) down --remove-orphans
-	PROTO=$(PROTO) $(COMPOSE) up -d --build
-	@echo "laboratório no ar com $(PROTO). OSPF leva ~50 s para convergir; RIP ~10 s."
+	PROTO=$(PROTO) ATRASO=$(ATRASO) $(COMPOSE) up -d --build
+	@echo "laboratório no ar com $(PROTO)$(if $(filter 1,$(ATRASO)), e atraso nas redes de trânsito,). OSPF leva ~50 s para convergir; RIP ~10 s."
 
 down:  ## derruba o laboratório
 	$(COMPOSE) down --remove-orphans
@@ -53,16 +55,16 @@ verificar:  ## critério de aceite (convergência, conectividade, falha): make v
 	sh scripts/verificar.sh $(PROTO)
 
 metricas:  ## coleta as métricas de um protocolo (~7 min): make metricas PROTO=ospf
-	sh scripts/metricas.sh $(PROTO)
+	ATRASO=$(ATRASO) sh scripts/metricas.sh $(PROTO)
 
 metricas-todas:  ## coleta OSPF, RIP e algoritmo próprio em sequência
-	-sh scripts/metricas.sh ospf
-	-sh scripts/metricas.sh rip
-	-sh scripts/metricas.sh proprio
+	-ATRASO=$(ATRASO) sh scripts/metricas.sh ospf
+	-ATRASO=$(ATRASO) sh scripts/metricas.sh rip
+	-ATRASO=$(ATRASO) sh scripts/metricas.sh proprio
 
-graficos:  ## gera resultados/graficos/*.png e resumo.md
+graficos:  ## gera resultados/graficos/*.png e resumo.md (ATRASO=1: resultados/atraso/graficos)
 	docker build -q -t roteamento-lab/analise -f docker/analise.Dockerfile . >/dev/null
-	docker run --rm -v "$(CURDIR)":/lab roteamento-lab/analise
+	docker run --rm -e ATRASO=$(ATRASO) -v "$(CURDIR)":/lab roteamento-lab/analise
 
 shell:  ## shell em um nó: make shell NO=a
 	$(COMPOSE) exec $(NO) sh
@@ -74,4 +76,4 @@ logs:  ## logs de um nó: make logs NO=a
 	$(COMPOSE) logs -f $(NO)
 
 limpar:  ## apaga resultados coletados
-	rm -rf resultados/ospf resultados/rip resultados/proprio resultados/graficos
+	rm -rf resultados/ospf resultados/rip resultados/proprio resultados/graficos resultados/atraso

@@ -78,6 +78,22 @@ Todos os protocolos passam pelo mesmo cenário (`scripts/metricas.sh`):
 | Delay | RTT de 20 pings de `ha` para `he`, e número de saltos no traceroute |
 | Falha de enlace | ping contínuo de `ha` para `he` a cada 0,2 s; derruba A em `sw1`; mede o maior intervalo sem resposta, os pacotes perdidos e o tráfego de controle da reação |
 
+### Cenário com atraso
+
+Nos containers todos os enlaces têm a mesma latência, então uma métrica baseada em atraso não tem
+o que medir. Com `ATRASO=1`, cada roteador aplica com `tc netem` o atraso de `configs/atrasos.conf`
+nas redes de trânsito antes de subir o protocolo: 1 ms no `sw0`, 15 ms no `sw1`, 3 ms no `be` e 5 ms
+no `cd` (ida; o RTT é o dobro). Os valores são proporcionais à distância, e o arquivo explica cada um.
+
+```sh
+make metricas PROTO=ospf ATRASO=1   # grava em resultados/atraso/<proto>/
+make graficos ATRASO=1              # resultados/atraso/graficos/
+make up PROTO=proprio ATRASO=1      # sobe o laboratório com atraso, para testes e o vídeo
+```
+
+De A até E, RIP e OSPF continuam usando o caminho direto por `sw1` (1 salto, 30 ms de RTT), e o
+algoritmo próprio passa por B (2 saltos, cerca de 10 ms). Os resultados do cenário base não são afetados.
+
 Os filtros de captura são `ip proto 89` (OSPF), `udp port 520` (RIP) e `udp port 5555` (algoritmo próprio).
 Cada execução grava em `resultados/<proto>/`: `metricas.csv`, as tabelas de rotas, os pcaps e as saídas de ping e traceroute.
 Os tempos podem ser ajustados por variável: `JANELA`, `FALHA_TOTAL`, `FALHA_APOS` e `CONV_MAX` (ver o cabeçalho do script).
