@@ -7,10 +7,12 @@ NO    ?= a
 DE    ?= ha
 PARA  ?= 10.0.5.10
 REDE  ?= 10.0.20.
+PROTOS ?= ospf rip proprio
+PAUSA  ?= 2
 COMPOSE = docker compose
 
 .PHONY: help build up down status rotas vizinhos ping trace falha restaura verificar \
-        metricas metricas-todas graficos shell vtysh logs limpar
+        metricas metricas-todas graficos demo shell vtysh logs limpar
 
 help:  ## lista os comandos
 	@grep -E '^[a-z-]+:.*##' $(MAKEFILE_LIST) | awk -F':.*## ' '{printf "  make %-16s %s\n", $$1, $$2}'
@@ -65,6 +67,9 @@ metricas-todas:  ## coleta OSPF, RIP e algoritmo próprio em sequência
 graficos:  ## gera resultados/graficos/*.png e resumo.md (ATRASO=1: resultados/atraso/graficos)
 	docker build -q -t roteamento-lab/analise -f docker/analise.Dockerfile . >/dev/null
 	docker run --rm -e ATRASO=$(ATRASO) -v "$(CURDIR)":/lab roteamento-lab/analise
+
+demo:  ## demonstração para o vídeo, sem interação: make demo PROTOS="ospf rip proprio" ATRASO=0
+	PROTOS="$(PROTOS)" ATRASO=$(ATRASO) PAUSA=$(PAUSA) sh scripts/demo.sh
 
 shell:  ## shell em um nó: make shell NO=a
 	$(COMPOSE) exec $(NO) sh

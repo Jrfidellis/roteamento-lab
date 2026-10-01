@@ -1,0 +1,9 @@
+10.0.1.0/24 via 10.0.34.3 dev eth0 proto openr metric 345 
+10.0.2.0/24 via 10.0.34.3 dev eth0 proto openr metric 344 
+10.0.3.0/24 via 10.0.34.3 dev eth0 proto openr metric 324 
+10.0.4.0/24 dev eth1 proto kernel scope link src 10.0.4.1 
+10.0.5.0/24 via 10.0.34.3 dev eth0 proto openr metric 507 
+10.0.10.0/24 via 10.0.34.3 dev eth0 proto openr metric 324 
+10.0.20.0/24 dev eth2 proto kernel scope link src 10.0.20.4 
+10.0.25.0/24 via 10.0.34.3 dev eth0 proto openr metric 344 
+10.0.34.0/24 dev eth0 proto kernel scope link src 10.0.34.4 

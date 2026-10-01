@@ -1,0 +1,9 @@
+10.0.1.0/24 dev eth0 proto kernel scope link src 10.0.1.1 
+10.0.2.0/24 nhid 9 via 10.0.10.2 dev eth1 proto rip metric 20 
+10.0.3.0/24 nhid 10 via 10.0.10.3 dev eth1 proto rip metric 20 
+10.0.4.0/24 nhid 13 via 10.0.20.4 dev eth2 proto rip metric 20 
+10.0.5.0/24 nhid 14 via 10.0.20.5 dev eth2 proto rip metric 20 
+10.0.10.0/24 dev eth1 proto kernel scope link src 10.0.10.1 
+10.0.20.0/24 dev eth2 proto kernel scope link src 10.0.20.1 
+10.0.25.0/24 nhid 9 via 10.0.10.2 dev eth1 proto rip metric 20 
+10.0.34.0/24 nhid 10 via 10.0.10.3 dev eth1 proto rip metric 20 

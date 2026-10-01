@@ -1,0 +1,13 @@
+10.0.1.0/24 nhid 17 via 10.0.10.1 dev eth2 proto ospf metric 20 
+10.0.2.0/24 dev eth1 proto kernel scope link src 10.0.2.1 
+10.0.3.0/24 nhid 18 via 10.0.10.3 dev eth2 proto ospf metric 20 
+10.0.4.0/24 nhid 19 proto ospf metric 20 
+	nexthop via 10.0.25.5 dev eth0 weight 1 
+	nexthop via 10.0.10.1 dev eth2 weight 1 
+10.0.5.0/24 nhid 11 via 10.0.25.5 dev eth0 proto ospf metric 20 
+10.0.10.0/24 dev eth2 proto kernel scope link src 10.0.10.2 
+10.0.20.0/24 nhid 19 proto ospf metric 20 
+	nexthop via 10.0.25.5 dev eth0 weight 1 
+	nexthop via 10.0.10.1 dev eth2 weight 1 
+10.0.25.0/24 dev eth0 proto kernel scope link src 10.0.25.2 
+10.0.34.0/24 nhid 18 via 10.0.10.3 dev eth2 proto ospf metric 20 

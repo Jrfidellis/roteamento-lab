@@ -54,6 +54,7 @@ make restaura NO=a REDE=10.0.20.
 make vtysh NO=a           # CLI do FRR, com a mesma sintaxe do IOS usado no Packet Tracer
 make down
 make help                 # todos os comandos
+make demo                 # demonstração para o vídeo: OSPF, RIP e Gravidade em sequência, sem interação
 ```
 
 O OSPF leva cerca de 50 s para convergir depois do `up`, por causa da espera de 40 s da eleição de DR

@@ -1,0 +1,481 @@
+{"router_id": "1.1.1.1", "interfaces": ["eth0=10.0.1.1/24", "eth1=10.0.10.1/24", "eth2=10.0.20.1/24"], "hello_s": 5.0, "anuncio_s": 10.0, "tempo_morto_s": 15, "t": 1790887060.0381467, "no": "a", "evento": "inicio"}
+{"vizinho": "10.0.20.5", "router_id": "5.5.5.5", "interface": "eth2", "rtt_ms": 1.691, "custo": 2.86, "t": 1790887060.1418247, "no": "a", "evento": "vizinho_up"}
+{"vizinho": "10.0.10.2", "router_id": "2.2.2.2", "interface": "eth1", "rtt_ms": 2.207, "custo": 4.869, "t": 1790887060.1422863, "no": "a", "evento": "vizinho_up"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 2.86, "t": 1790887060.672677, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 2.86, "t": 1790887060.6731472, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 4.869, "t": 1790887060.682399, "no": "a", "evento": "rota_instalada"}
+{"vizinho": "10.0.20.4", "router_id": "4.4.4.4", "interface": "eth2", "rtt_ms": 1.146, "custo": 1.314, "t": 1790887065.1966927, "no": "a", "evento": "vizinho_up"}
+{"vizinho": "10.0.10.3", "router_id": "3.3.3.3", "interface": "eth1", "rtt_ms": 19.922, "custo": 396.878, "t": 1790887065.2153234, "no": "a", "evento": "vizinho_up"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 1.314, "t": 1790887065.2269416, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 1.314, "t": 1790887065.2272213, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 396.878, "t": 1790887065.2317643, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 364.274, "t": 1790887065.7633803, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 179.947, "t": 1790887066.2947414, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 187.744, "t": 1790887075.2921755, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 144.054, "t": 1790887075.8437302, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 53.375, "t": 1790887080.3312442, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 99.838, "t": 1790887080.3317268, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 99.838, "t": 1790887080.3430433, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 115.269, "t": 1790887080.878634, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 182.896, "t": 1790887085.3682303, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 216.844, "t": 1790887090.4437494, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 871.575, "t": 1790887090.4584126, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 188.689, "t": 1790887090.458594, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 309.191, "t": 1790887090.9789739, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 96.872, "t": 1790887095.9950266, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 226.888, "t": 1790887100.4804108, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 136.74, "t": 1790887100.4809246, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 298.781, "t": 1790887100.4812236, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 226.888, "t": 1790887100.4814112, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 301.74, "t": 1790887101.0084286, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 465.042, "t": 1790887101.1356618, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 196.196, "t": 1790887105.4827554, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 221.701, "t": 1790887105.4891458, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 512.121, "t": 1790887106.0197022, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 490.301, "t": 1790887106.6687808, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 360.699, "t": 1790887115.5296657, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 494.413, "t": 1790887131.0942636, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 181.191, "t": 1790887141.2108889, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 131.889, "t": 1790887145.664475, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 131.889, "t": 1790887145.6649141, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 148.296, "t": 1790887145.6715128, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 297.486, "t": 1790887171.4475846, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 310.622, "t": 1790887171.44817, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 297.486, "t": 1790887171.448392, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 834.675, "t": 1790887176.3765419, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 855.889, "t": 1790887176.9187715, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 326.302, "t": 1790887185.9725795, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 196.944, "t": 1790887191.0174155, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 186.732, "t": 1790887191.0176723, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 83.536, "t": 1790887211.1853337, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 499.442, "t": 1790887211.1856525, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 83.536, "t": 1790887211.1858377, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 502.485, "t": 1790887222.4198003, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 352.877, "t": 1790887222.4417465, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 253.992, "t": 1790887226.4028704, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 148.766, "t": 1790887236.426717, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 190.605, "t": 1790887237.0038462, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 224.978, "t": 1790887237.0040681, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 190.605, "t": 1790887237.0042415, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 264.474, "t": 1790887246.5017815, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 133.611, "t": 1790887251.466584, "no": "a", "evento": "rota_instalada"}
+{"vizinho": "10.0.20.5", "router_id": "5.5.5.5", "interface": "eth2", "t": 1790887262.0452456, "no": "a", "evento": "vizinho_down"}
+{"vizinho": "10.0.20.4", "router_id": "4.4.4.4", "interface": "eth2", "t": 1790887262.0464911, "no": "a", "evento": "vizinho_down"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 692.833, "t": 1790887262.0577588, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 715.986, "t": 1790887266.657554, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 458.429, "t": 1790887267.1981096, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 281.618, "t": 1790887271.6467657, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 428.007, "t": 1790887271.672328, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 409.91, "t": 1790887276.6831884, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 409.91, "t": 1790887276.6956508, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 625.163, "t": 1790887277.2417068, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 416.519, "t": 1790887281.665961, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 452.618, "t": 1790887297.3600926, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 494.751, "t": 1790887297.3780193, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 570.516, "t": 1790887301.866422, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 575.863, "t": 1790887302.4094403, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 558.796, "t": 1790887311.908918, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 558.796, "t": 1790887311.9215965, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 482.325, "t": 1790887322.002954, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 788.837, "t": 1790887322.5624263, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 997.022, "t": 1790887327.0364003, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 1751.977, "t": 1790887327.5787275, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 1153.357, "t": 1790887337.0384574, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 1372.549, "t": 1790887347.726235, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 1149.07, "t": 1790887352.7462215, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 505.994, "t": 1790887357.2245898, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 940.119, "t": 1790887357.790604, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 607.651, "t": 1790887362.2679546, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 731.456, "t": 1790887367.2686136, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 690.644, "t": 1790887367.2690291, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 587.47, "t": 1790887372.2963417, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 655.784, "t": 1790887372.310268, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 587.47, "t": 1790887372.3105154, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 802.72, "t": 1790887373.388745, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 802.72, "t": 1790887377.3517005, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 702.364, "t": 1790887403.0137668, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 467.451, "t": 1790887407.4764938, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 486.225, "t": 1790887422.6626348, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 261.521, "t": 1790887427.6462414, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 650.702, "t": 1790887427.6719134, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 525.318, "t": 1790887437.7013211, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 347.713, "t": 1790887438.2460666, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 541.775, "t": 1790887442.7528734, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 925.746, "t": 1790887448.32767, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 947.149, "t": 1790887452.7744286, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 1369.763, "t": 1790887452.7955475, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 1369.763, "t": 1790887452.7956603, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 1215.217, "t": 1790887457.8144572, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 1163.711, "t": 1790887457.814848, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 1800.677, "t": 1790887473.4889233, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 1800.677, "t": 1790887473.4892254, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 1791.622, "t": 1790887477.9710777, "no": "a", "evento": "rota_instalada"}
+{"vizinho": "10.0.20.5", "router_id": "5.5.5.5", "interface": "eth2", "rtt_ms": 3.42, "custo": 11.695, "t": 1790887487.9916031, "no": "a", "evento": "vizinho_up"}
+{"vizinho": "10.0.20.4", "router_id": "4.4.4.4", "interface": "eth2", "rtt_ms": 10.11, "custo": 102.209, "t": 1790887487.998251, "no": "a", "evento": "vizinho_up"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 161.015, "t": 1790887488.0276308, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 102.209, "t": 1790887488.0283031, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 102.209, "t": 1790887488.0287652, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 212.753, "t": 1790887488.041197, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 11.695, "t": 1790887488.0414364, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 11.695, "t": 1790887488.0416734, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 291.202, "t": 1790887493.0589101, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 291.202, "t": 1790887493.0592546, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 887.117, "t": 1790887503.123725, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 995.834, "t": 1790887518.7611425, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 1618.363, "t": 1790887519.2951431, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 1420.778, "t": 1790887528.2835405, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 1128.203, "t": 1790887528.2920868, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 1074.96, "t": 1790887528.8377976, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 761.301, "t": 1790887538.3695688, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 576.413, "t": 1790887538.3817043, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 1420.778, "t": 1790887538.9181244, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 461.751, "t": 1790887538.9188137, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 325.973, "t": 1790887543.3964322, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 999.861, "t": 1790887543.3968568, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 325.973, "t": 1790887543.3972216, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 713.552, "t": 1790887548.40835, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 314.712, "t": 1790887553.5159807, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 314.712, "t": 1790887553.5165257, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 512.819, "t": 1790887553.5347006, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 548.756, "t": 1790887554.0647168, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 493.095, "t": 1790887558.5323968, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 577.435, "t": 1790887558.5480323, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 797.169, "t": 1790887563.6411717, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 797.169, "t": 1790887563.6413755, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 1086.533, "t": 1790887564.691889, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 874.489, "t": 1790887564.6996772, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 874.489, "t": 1790887564.699888, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 1014.929, "t": 1790887568.652774, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 190.828, "t": 1790887568.6536272, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 231.738, "t": 1790887568.6670032, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 190.828, "t": 1790887568.667237, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 657.086, "t": 1790887578.7759352, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 309.684, "t": 1790887583.7702897, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 309.684, "t": 1790887583.7737155, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 347.263, "t": 1790887593.8779151, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 592.605, "t": 1790887594.4056952, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 384.782, "t": 1790887598.925806, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 333.576, "t": 1790887598.9260356, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 146.839, "t": 1790887613.9794474, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 456.706, "t": 1790887614.0007222, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 660.606, "t": 1790887614.531378, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 713.449, "t": 1790887619.6087112, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 300.15, "t": 1790887629.1597831, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 233.188, "t": 1790887649.4650233, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 179.553, "t": 1790887649.4657123, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 332.757, "t": 1790887665.1108863, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 304.606, "t": 1790887669.5961657, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 185.66, "t": 1790887669.5964897, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 297.217, "t": 1790887669.6016371, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 193.349, "t": 1790887674.5959485, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 102.199, "t": 1790887679.6023917, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 411.192, "t": 1790887684.6344302, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 456.34, "t": 1790887689.6334918, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 417.717, "t": 1790887689.6338236, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 643.841, "t": 1790887689.647198, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 717.374, "t": 1790887689.6473312, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 643.841, "t": 1790887689.6474087, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 525.585, "t": 1790887695.209439, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 564.273, "t": 1790887695.7390783, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 436.924, "t": 1790887704.6889007, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 411.952, "t": 1790887704.6965096, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 225.162, "t": 1790887709.6992333, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 225.162, "t": 1790887709.6995876, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 391.003, "t": 1790887709.7161763, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 308.491, "t": 1790887709.716555, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 344.152, "t": 1790887709.7232318, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 135.619, "t": 1790887719.7023776, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 166.377, "t": 1790887719.722544, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 135.619, "t": 1790887719.7229033, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 518.871, "t": 1790887719.7336204, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 319.658, "t": 1790887719.7338395, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 319.658, "t": 1790887719.7339687, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 568.283, "t": 1790887729.8086293, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 568.283, "t": 1790887729.8087595, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 381.206, "t": 1790887739.8392406, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 354.292, "t": 1790887744.89216, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 362.622, "t": 1790887756.0373902, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 281.174, "t": 1790887759.976561, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 196.575, "t": 1790887760.520608, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 510.239, "t": 1790887766.0554502, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 633.268, "t": 1790887770.0128784, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 633.268, "t": 1790887770.5545251, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 949.412, "t": 1790887775.0522351, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 678.317, "t": 1790887775.052494, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 480.549, "t": 1790887775.5886571, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 480.549, "t": 1790887776.1253269, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 355.932, "t": 1790887780.047783, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 566.317, "t": 1790887780.0763233, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 488.551, "t": 1790887780.604247, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 338.817, "t": 1790887785.0723648, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 469.726, "t": 1790887785.0822494, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 411.241, "t": 1790887791.1957145, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 411.241, "t": 1790887791.1959374, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 609.74, "t": 1790887791.7225611, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 667.562, "t": 1790887795.702361, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 876.717, "t": 1790887795.7227156, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 482.871, "t": 1790887805.2300792, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 421.301, "t": 1790887805.266626, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 393.288, "t": 1790887805.7892535, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 167.641, "t": 1790887810.2457354, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 298.435, "t": 1790887810.264673, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 366.806, "t": 1790887810.800336, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 482.871, "t": 1790887810.8006694, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 484.649, "t": 1790887815.3052824, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 593.015, "t": 1790887815.3054125, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 926.984, "t": 1790887815.8284664, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 768.931, "t": 1790887815.8392904, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 645.568, "t": 1790887820.2860959, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 522.696, "t": 1790887820.8117633, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 266.146, "t": 1790887825.2984395, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 226.766, "t": 1790887830.3494012, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 391.528, "t": 1790887830.3497875, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 331.637, "t": 1790887830.3677619, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 333.266, "t": 1790887835.9375288, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 337.952, "t": 1790887840.4465878, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 749.916, "t": 1790887870.5453026, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 281.854, "t": 1790887871.0753944, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 653.742, "t": 1790887880.6279757, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 596.71, "t": 1790887885.59494, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 524.108, "t": 1790887890.6311247, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 524.108, "t": 1790887890.6458402, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 194.916, "t": 1790887895.6634073, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 539.044, "t": 1790887900.6708212, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 662.351, "t": 1790887901.2169662, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 168.546, "t": 1790887910.779802, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 166.694, "t": 1790887915.7909815, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 166.493, "t": 1790887915.7912223, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 1177.635, "t": 1790887920.8656962, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 1177.635, "t": 1790887920.8664165, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 1261.326, "t": 1790887921.788609, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 1261.326, "t": 1790887921.7888925, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 1274.095, "t": 1790887930.9184546, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 1128.554, "t": 1790887946.57744, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 647.809, "t": 1790887951.0573392, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 589.848, "t": 1790887951.057917, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 526.382, "t": 1790887951.058877, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 381.723, "t": 1790887961.167525, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 256.045, "t": 1790887961.1677752, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 418.193, "t": 1790887961.710384, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 307.098, "t": 1790887966.2171428, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 307.098, "t": 1790887966.217324, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 554.019, "t": 1790887967.296944, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 554.019, "t": 1790887967.2973976, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 549.036, "t": 1790887971.2250483, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 620.574, "t": 1790887971.7774665, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 691.321, "t": 1790887972.3077664, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 530.851, "t": 1790887976.241159, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 258.078, "t": 1790887976.2597342, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 258.078, "t": 1790887976.2600296, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 421.289, "t": 1790887976.2654433, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 289.288, "t": 1790887981.2899592, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 162.823, "t": 1790887981.2901819, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 284.708, "t": 1790887981.2965336, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 268.037, "t": 1790887981.302864, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 147.147, "t": 1790887986.265533, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 147.147, "t": 1790887986.2973804, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 701.002, "t": 1790887986.8322072, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 762.889, "t": 1790887986.8386712, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 239.694, "t": 1790888001.3223183, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 325.305, "t": 1790888001.3294735, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 783.154, "t": 1790888006.333735, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 674.316, "t": 1790888011.341721, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 504.322, "t": 1790888016.3787248, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 466.336, "t": 1790888016.3869252, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 377.022, "t": 1790888016.3951485, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 571.806, "t": 1790888021.3868403, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 539.742, "t": 1790888031.5362537, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 432.095, "t": 1790888031.5443249, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 392.41, "t": 1790888036.5324166, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 579.977, "t": 1790888036.539729, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 665.692, "t": 1790888046.5331655, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 526.79, "t": 1790888051.638432, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 368.255, "t": 1790888051.6391048, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 844.491, "t": 1790888056.6836503, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 844.491, "t": 1790888056.6838167, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 530.84, "t": 1790888061.6908808, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 319.53, "t": 1790888066.7027128, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 788.433, "t": 1790888066.711812, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 741.689, "t": 1790888071.7406092, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 1194.171, "t": 1790888071.7548048, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 840.717, "t": 1790888076.7498248, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 768.307, "t": 1790888076.7501647, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 753.285, "t": 1790888081.7524621, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 753.285, "t": 1790888081.7526455, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 648.531, "t": 1790888082.3117912, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 576.121, "t": 1790888082.3121405, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 753.285, "t": 1790888082.8388863, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 207.695, "t": 1790888086.783584, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 860.541, "t": 1790888086.7931252, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 190.087, "t": 1790888086.8069882, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 553.011, "t": 1790888087.3666217, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 553.011, "t": 1790888087.3670566, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 1014.308, "t": 1790888087.895244, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 130.397, "t": 1790888096.8749073, "no": "a", "evento": "rota_instalada"}
+{"router_id": "1.1.1.1", "interfaces": ["eth2=10.0.20.1/24", "eth0=10.0.1.1/24", "eth1=10.0.10.1/24"], "hello_s": 5.0, "anuncio_s": 10.0, "tempo_morto_s": 15, "t": 1790888105.5645845, "no": "a", "evento": "inicio"}
+{"vizinho": "10.0.10.3", "router_id": "3.3.3.3", "interface": "eth1", "rtt_ms": 2.391, "custo": 5.719, "t": 1790888105.6161752, "no": "a", "evento": "vizinho_up"}
+{"vizinho": "10.0.10.2", "router_id": "2.2.2.2", "interface": "eth1", "rtt_ms": 4.647, "custo": 21.594, "t": 1790888105.6184256, "no": "a", "evento": "vizinho_up"}
+{"vizinho": "10.0.20.4", "router_id": "4.4.4.4", "interface": "eth2", "rtt_ms": 41.24, "custo": 1700.7, "t": 1790888105.6548827, "no": "a", "evento": "vizinho_up"}
+{"vizinho": "10.0.20.5", "router_id": "5.5.5.5", "interface": "eth2", "rtt_ms": 41.467, "custo": 1719.533, "t": 1790888105.655102, "no": "a", "evento": "vizinho_up"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 21.594, "t": 1790888105.9347324, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 21.594, "t": 1790888105.9360986, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 1719.533, "t": 1790888105.9584181, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 5.719, "t": 1790888106.1620812, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 5.719, "t": 1790888106.1631618, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 1700.7, "t": 1790888106.2007654, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 60.78, "t": 1790888106.4764357, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 117.531, "t": 1790888106.6843982, "no": "a", "evento": "rota_instalada"}
+{"router_id": "1.1.1.1", "interfaces": ["eth0=10.0.1.1/24", "eth1=10.0.10.1/24", "eth2=10.0.20.1/24"], "hello_s": 5.0, "anuncio_s": 10.0, "tempo_morto_s": 15, "t": 1790889279.2616096, "no": "a", "evento": "inicio"}
+{"vizinho": "10.0.10.2", "router_id": "2.2.2.2", "interface": "eth1", "rtt_ms": 7.951, "custo": 63.216, "t": 1790889279.3702161, "no": "a", "evento": "vizinho_up"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 63.216, "t": 1790889279.3793283, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 63.216, "t": 1790889279.3797126, "no": "a", "evento": "rota_instalada"}
+{"vizinho": "10.0.20.5", "router_id": "5.5.5.5", "interface": "eth2", "rtt_ms": 51.325, "custo": 2634.209, "t": 1790889279.4139335, "no": "a", "evento": "vizinho_up"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 226.757, "t": 1790889279.9041233, "no": "a", "evento": "rota_instalada"}
+{"vizinho": "10.0.10.3", "router_id": "3.3.3.3", "interface": "eth1", "rtt_ms": 4.28, "custo": 18.317, "t": 1790889284.4685905, "no": "a", "evento": "vizinho_up"}
+{"vizinho": "10.0.20.4", "router_id": "4.4.4.4", "interface": "eth2", "rtt_ms": 30.871, "custo": 953.008, "t": 1790889284.4950747, "no": "a", "evento": "vizinho_up"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 18.317, "t": 1790889284.6581662, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 124.023, "t": 1790889284.6584406, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 18.317, "t": 1790889284.6587484, "no": "a", "evento": "rota_instalada"}
+{"vizinho": "10.0.20.5", "router_id": "5.5.5.5", "interface": "eth2", "t": 1790889446.3934798, "no": "a", "evento": "vizinho_down"}
+{"vizinho": "10.0.20.4", "router_id": "4.4.4.4", "interface": "eth2", "t": 1790889446.3949418, "no": "a", "evento": "vizinho_down"}
+{"vizinho": "10.0.20.4", "router_id": "4.4.4.4", "interface": "eth2", "rtt_ms": 39.91, "custo": 1592.835, "t": 1790889667.2320342, "no": "a", "evento": "vizinho_up"}
+{"vizinho": "10.0.20.5", "router_id": "5.5.5.5", "interface": "eth2", "rtt_ms": 58.994, "custo": 3480.253, "t": 1790889667.2510922, "no": "a", "evento": "vizinho_up"}
+{"router_id": "1.1.1.1", "interfaces": ["eth0=10.0.1.1/24", "eth1=10.0.10.1/24", "eth2=10.0.20.1/24"], "hello_s": 5.0, "anuncio_s": 10.0, "tempo_morto_s": 15, "t": 1790890055.528183, "no": "a", "evento": "inicio"}
+{"vizinho": "10.0.20.4", "router_id": "4.4.4.4", "interface": "eth2", "rtt_ms": 1.82, "custo": 3.312, "t": 1790890055.547168, "no": "a", "evento": "vizinho_up"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 3.312, "t": 1790890056.0589006, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 3.312, "t": 1790890056.0590606, "no": "a", "evento": "rota_instalada"}
+{"vizinho": "10.0.10.3", "router_id": "3.3.3.3", "interface": "eth1", "rtt_ms": 2.072, "custo": 4.293, "t": 1790890060.558678, "no": "a", "evento": "vizinho_up"}
+{"vizinho": "10.0.10.2", "router_id": "2.2.2.2", "interface": "eth1", "rtt_ms": 2.778, "custo": 7.718, "t": 1790890060.559304, "no": "a", "evento": "vizinho_up"}
+{"vizinho": "10.0.20.5", "router_id": "5.5.5.5", "interface": "eth2", "rtt_ms": 4.423, "custo": 19.559, "t": 1790890060.5610974, "no": "a", "evento": "vizinho_up"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 22.969, "t": 1790890060.889864, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 31.563, "t": 1790890060.8899884, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 19.559, "t": 1790890060.8900857, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 19.559, "t": 1790890060.8901625, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 7.718, "t": 1790890060.9015176, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 4.293, "t": 1790890060.9016874, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 6.884, "t": 1790890060.9018607, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 12.057, "t": 1790890060.9019883, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 7.718, "t": 1790890060.9021177, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 4.293, "t": 1790890060.9022248, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 5.674, "t": 1790890070.691324, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 5.674, "t": 1790890070.6917875, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 19.103, "t": 1790890070.7021224, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 16.512, "t": 1790890070.70236, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 85.883, "t": 1790890086.699209, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 68.015, "t": 1790890106.8526008, "no": "a", "evento": "rota_instalada"}
+{"vizinho": "10.0.20.5", "router_id": "5.5.5.5", "interface": "eth2", "t": 1790890116.3767083, "no": "a", "evento": "vizinho_down"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 51.764, "t": 1790890116.3809056, "no": "a", "evento": "rota_instalada"}
+{"vizinho": "10.0.20.4", "router_id": "4.4.4.4", "interface": "eth2", "t": 1790890116.6013107, "no": "a", "evento": "vizinho_down"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 86.313, "t": 1790890131.7508051, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 105.64, "t": 1790890131.7517865, "no": "a", "evento": "rota_instalada"}
+{"vizinho": "10.0.20.5", "router_id": "5.5.5.5", "interface": "eth2", "rtt_ms": 2.595, "custo": 6.734, "t": 1790890136.2457967, "no": "a", "evento": "vizinho_up"}
+{"vizinho": "10.0.20.4", "router_id": "4.4.4.4", "interface": "eth2", "rtt_ms": 30.153, "custo": 909.186, "t": 1790890136.273216, "no": "a", "evento": "vizinho_up"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 6.734, "t": 1790890136.2900333, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 6.734, "t": 1790890136.2903442, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 77.529, "t": 1790890156.3892758, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 9.763, "t": 1790890156.3900747, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 118.054, "t": 1790890156.9390244, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 122.309, "t": 1790890161.3982863, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 91.222, "t": 1790890181.6047654, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 162.816, "t": 1790890181.621751, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 91.222, "t": 1790890181.6220138, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 85.101, "t": 1790890191.6922, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 85.101, "t": 1790890191.6925607, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 214.892, "t": 1790890192.5824645, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 127.994, "t": 1790890196.7113574, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 154.486, "t": 1790890197.6158042, "no": "a", "evento": "rota_instalada"}
+{"router_id": "1.1.1.1", "interfaces": ["eth0=10.0.1.1/24", "eth1=10.0.10.1/24", "eth2=10.0.20.1/24"], "hello_s": 5.0, "anuncio_s": 10.0, "tempo_morto_s": 15, "t": 1790890225.6709063, "no": "a", "evento": "inicio"}
+{"vizinho": "10.0.20.5", "router_id": "5.5.5.5", "interface": "eth2", "rtt_ms": 2.54, "custo": 6.454, "t": 1790890225.774163, "no": "a", "evento": "vizinho_up"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 6.454, "t": 1790890225.7783954, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 6.454, "t": 1790890225.7785544, "no": "a", "evento": "rota_instalada"}
+{"vizinho": "10.0.10.2", "router_id": "2.2.2.2", "interface": "eth1", "rtt_ms": 3.679, "custo": 13.538, "t": 1790890230.815011, "no": "a", "evento": "vizinho_up"}
+{"vizinho": "10.0.20.4", "router_id": "4.4.4.4", "interface": "eth2", "rtt_ms": 3.905, "custo": 15.247, "t": 1790890230.815347, "no": "a", "evento": "vizinho_up"}
+{"vizinho": "10.0.10.3", "router_id": "3.3.3.3", "interface": "eth1", "rtt_ms": 4.184, "custo": 17.504, "t": 1790890230.8154764, "no": "a", "evento": "vizinho_up"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 17.504, "t": 1790890230.8337588, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 17.504, "t": 1790890230.8339336, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 15.247, "t": 1790890231.2810504, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 13.538, "t": 1790890231.3681333, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 9.963, "t": 1790890240.9645903, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 32.995, "t": 1790890246.002448, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 156.568, "t": 1790890246.5255728, "no": "a", "evento": "rota_instalada"}
+{"vizinho": "10.0.20.5", "router_id": "5.5.5.5", "interface": "eth2", "t": 1790890262.064535, "no": "a", "evento": "vizinho_down"}
+{"vizinho": "10.0.20.4", "router_id": "4.4.4.4", "interface": "eth2", "t": 1790890262.0655878, "no": "a", "evento": "vizinho_down"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 273.908, "t": 1790890262.0955112, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 169.455, "t": 1790890262.096, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 169.455, "t": 1790890262.0962644, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 304.113, "t": 1790890262.111925, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 161.906, "t": 1790890262.52175, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 152.037, "t": 1790890267.0533407, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 266.484, "t": 1790890272.0948744, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 271.426, "t": 1790890272.0954053, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 266.484, "t": 1790890272.095629, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 362.975, "t": 1790890272.6018028, "no": "a", "evento": "rota_instalada"}
+{"vizinho": "10.0.20.4", "router_id": "4.4.4.4", "interface": "eth2", "rtt_ms": 3.343, "custo": 11.179, "t": 1790890276.1911955, "no": "a", "evento": "vizinho_up"}
+{"vizinho": "10.0.20.5", "router_id": "5.5.5.5", "interface": "eth2", "rtt_ms": 4.843, "custo": 23.453, "t": 1790890276.192734, "no": "a", "evento": "vizinho_up"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 11.179, "t": 1790890276.250591, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 23.453, "t": 1790890276.2507699, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 23.453, "t": 1790890276.2509062, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 11.179, "t": 1790890276.2510364, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 102.884, "t": 1790890286.31033, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 90.737, "t": 1790890291.317594, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 162.637, "t": 1790890311.4796393, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 149.241, "t": 1790890311.4800465, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 62.692, "t": 1790890326.5984008, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 236.849, "t": 1790890326.6175754, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 261.027, "t": 1790890331.6489003, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 99.54, "t": 1790890331.64939, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 81.625, "t": 1790890347.5515888, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 78.856, "t": 1790890351.8367167, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 78.856, "t": 1790890351.8373985, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 164.395, "t": 1790890352.4179611, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 102.359, "t": 1790890357.1396234, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 41.844, "t": 1790890367.7917495, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 268.282, "t": 1790890382.1110206, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 268.282, "t": 1790890382.1118572, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 92.422, "t": 1790890383.1988678, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 92.422, "t": 1790890383.1998754, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 160.994, "t": 1790890397.8418388, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 156.404, "t": 1790890397.8425999, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 214.652, "t": 1790890402.9278777, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 214.652, "t": 1790890402.9281657, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 352.647, "t": 1790890413.2966273, "no": "a", "evento": "rota_instalada"}
+{"router_id": "1.1.1.1", "interfaces": ["eth0=10.0.1.1/24", "eth2=10.0.20.1/24", "eth1=10.0.10.1/24"], "hello_s": 5.0, "anuncio_s": 10.0, "tempo_morto_s": 15, "t": 1790890422.312852, "no": "a", "evento": "inicio"}
+{"vizinho": "10.0.20.4", "router_id": "4.4.4.4", "interface": "eth2", "rtt_ms": 3.101, "custo": 9.615, "t": 1790890422.416679, "no": "a", "evento": "vizinho_up"}
+{"vizinho": "10.0.20.5", "router_id": "5.5.5.5", "interface": "eth2", "rtt_ms": 3.252, "custo": 10.576, "t": 1790890422.416824, "no": "a", "evento": "vizinho_up"}
+{"vizinho": "10.0.10.2", "router_id": "2.2.2.2", "interface": "eth1", "rtt_ms": 3.06, "custo": 9.364, "t": 1790890422.4170573, "no": "a", "evento": "vizinho_up"}
+{"vizinho": "10.0.10.3", "router_id": "3.3.3.3", "interface": "eth1", "rtt_ms": 3.232, "custo": 10.449, "t": 1790890422.4172273, "no": "a", "evento": "vizinho_up"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 10.576, "t": 1790890422.421178, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 10.576, "t": 1790890422.4212756, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 9.364, "t": 1790890422.4255977, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 10.449, "t": 1790890422.4257247, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 10.449, "t": 1790890422.4258358, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 9.615, "t": 1790890427.216506, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 5.052, "t": 1790890427.4311252, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 51.648, "t": 1790890427.4509385, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 27.047, "t": 1790890427.7523415, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 27.823, "t": 1790890427.7632413, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 17.977, "t": 1790890442.5934525, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 16.206, "t": 1790890447.6538382, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 72.962, "t": 1790890453.0678668, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 54.129, "t": 1790890453.075319, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 51.6, "t": 1790890457.7450264, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 202.881, "t": 1790890468.3416574, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 291.849, "t": 1790890469.3032951, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 83.873, "t": 1790890472.8497741, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.2.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 214.433, "t": 1790890477.8501012, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 26.343, "t": 1790890487.9307802, "no": "a", "evento": "rota_instalada"}
+{"vizinho": "10.0.20.4", "router_id": "4.4.4.4", "interface": "eth2", "t": 1790890498.4077508, "no": "a", "evento": "vizinho_down"}
+{"vizinho": "10.0.20.5", "router_id": "5.5.5.5", "interface": "eth2", "t": 1790890498.4085932, "no": "a", "evento": "vizinho_down"}
+{"destino": "10.0.2.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 371.323, "t": 1790890498.4460475, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 140.431, "t": 1790890498.4463046, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 143.905, "t": 1790890498.446458, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.3", "interface": "eth1", "metrica": 143.905, "t": 1790890498.4465945, "no": "a", "evento": "rota_instalada"}
+{"vizinho": "10.0.20.4", "router_id": "4.4.4.4", "interface": "eth2", "rtt_ms": 1.0, "custo": 1.0, "t": 1790890513.1625726, "no": "a", "evento": "vizinho_up"}
+{"vizinho": "10.0.20.5", "router_id": "5.5.5.5", "interface": "eth2", "rtt_ms": 3.268, "custo": 10.677, "t": 1790890513.1648247, "no": "a", "evento": "vizinho_up"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 59.892, "t": 1790890513.1993153, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.3.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 37.89, "t": 1790890513.629388, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.4.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 1.0, "t": 1790890513.6300242, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.34.0/24", "via": "10.0.20.4", "interface": "eth2", "metrica": 1.0, "t": 1790890513.6304684, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.5.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 10.677, "t": 1790890513.6446345, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.20.5", "interface": "eth2", "metrica": 10.677, "t": 1790890513.6449966, "no": "a", "evento": "rota_instalada"}
+{"destino": "10.0.25.0/24", "via": "10.0.10.2", "interface": "eth1", "metrica": 35.292, "t": 1790890518.245077, "no": "a", "evento": "rota_instalada"}
